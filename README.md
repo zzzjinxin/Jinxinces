@@ -11,7 +11,10 @@ https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-
 
 ## 好玩enen
 123
+<<<<<<< HEAD
 ##资料网站
 [创建应用](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)
 
+=======
+>>>>>>> a4c2cc0af516c9f189392a35d119c8704813f3fc
 
