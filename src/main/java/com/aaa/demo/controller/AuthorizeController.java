@@ -48,7 +48,7 @@ public class AuthorizeController {
         accessTokenDto.setClient_secret(clientSecret);
         String accessToken = githubProvider.getAccessToken(accessTokenDto);
         GithubUser githubUser = githubProvider.getUser(accessToken);
-        if (githubUser!=null){
+        if (githubUser!=null&&githubUser.getId()!=null){
             User user=new User();
             //接收的是网络传输id
             user.setAccountId(String.valueOf(githubUser.getId()));

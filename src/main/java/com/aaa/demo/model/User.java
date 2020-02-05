@@ -8,19 +8,19 @@ package com.aaa.demo.model;
  * @Version V1.0
  **/
 public class User {
-    private int id;
+    private Long id;
     private String accountId;
     private String name;
     private String token;
-    private long gmtCreate;
-    private long gmtModified;
+    private Long gmtCreate;
+    private Long gmtModified;
     private String bio;
     private String avatarUrl;
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -48,7 +48,7 @@ public class User {
         this.token = token;
     }
 
-    public long getGmtCreate() {
+    public Long getGmtCreate() {
         return gmtCreate;
     }
 
@@ -56,7 +56,7 @@ public class User {
         this.gmtCreate = gmtCreate;
     }
 
-    public long getGmtModified() {
+    public Long getGmtModified() {
         return gmtModified;
     }
 
