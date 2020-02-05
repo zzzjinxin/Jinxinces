@@ -11,10 +11,24 @@ https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-
 
 ## 好玩enen
 123
-<<<<<<< HEAD
+
 ##资料网站
 [创建应用](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)
 
-=======
->>>>>>> a4c2cc0af516c9f189392a35d119c8704813f3fc
+##脚本
+```sql
+create table USER
+(
+	ID int auto_increment,
+	ACCOUNT_ID VARCHAR(100),
+	NAME VARCHAR(50),
+	TOKEN CHAR(36),
+	GMT_CREATE BIGINT,
+	GMT_MODIFIED BIGINT,
+	constraint USER_PK
+		primary key (ID)
+);
+
+
+```
 

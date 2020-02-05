@@ -1,7 +1,7 @@
-package com.aaa.jinxin.demo.provider;
+package com.aaa.demo.provider;
 
-import com.aaa.jinxin.demo.dto.AccessTokenDto;
-import com.aaa.jinxin.demo.dto.GithubUser;
+import com.aaa.demo.dto.AccessTokenDto;
+import com.aaa.demo.dto.GithubUser;
 import com.alibaba.fastjson.JSON;
 import okhttp3.*;
 import org.springframework.stereotype.Component;

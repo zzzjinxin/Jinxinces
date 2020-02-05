@@ -1,4 +1,4 @@
-package com.aaa.jinxin.demo.dto;
+package com.aaa.demo.dto;
 
 /**
  * @ClassName 金鑫
