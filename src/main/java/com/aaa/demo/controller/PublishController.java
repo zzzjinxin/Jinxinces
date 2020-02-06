@@ -43,6 +43,29 @@ public class PublishController {
         model.addAttribute("title",title);
         model.addAttribute("description",description);
         model.addAttribute("tag",tag);
+
+        User user=null;
+        //判断当前是否有用户登入，如果有登入则显示在页面上个人信息
+        //没有登入，则跳转到登入页面
+
+        Cookie[] cookies = request.getCookies();
+        if (cookies!=null&&cookies.length!=0) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("token")) {
+                    String token = cookie.getValue();
+                    user = userMapper.findByToken(token);
+                    if (user != null) {
+                        request.getSession().setAttribute("user", user);
+                    }
+                    break;
+                }
+            }
+        }
+        //如果用户没有登入，则跳转到登入页面
+        if (user == null){
+            model.addAttribute("error","用户未登入");
+            return "publish";
+        }
         if (title!=null&&title.equals("")){
             model.addAttribute("error","没有问题标题");
             return "publish";
@@ -52,25 +75,6 @@ public class PublishController {
             return "publish";
         }if (tag!=null&&tag.equals("")){
             model.addAttribute("error","没有添加标签");
-            return "publish";
-        }
-        User user=null;
-        //判断当前是否有用户登入，如果有登入则显示在页面上个人信息
-        //没有登入，则跳转到登入页面
-        Cookie[] cookies = request.getCookies();
-        for (Cookie cookie:cookies) {
-            if (cookie.getName().equals("token")) {
-                String token = cookie.getValue();
-                user = userMapper.findByToken(token);
-                if (user != null) {
-                    request.getSession().setAttribute("user", user);
-                }
-                break;
-            }
-        }
-        //如果用户没有登入，则跳转到登入页面
-        if (user == null){
-            model.addAttribute("error","用户未登入");
             return "publish";
         }
         Question question=new Question();

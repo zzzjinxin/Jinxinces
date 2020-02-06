@@ -61,6 +61,7 @@ public class AuthorizeController {
             user.setGmtCreate(System.currentTimeMillis());
             //传递的是时间搓
             user.setGmtModified(user.getGmtCreate());
+            user.setAvatarUrl(githubUser.getAvatarUrl());
             userMapper.insert(user);
             response.addCookie(new Cookie("token",token));
             System.out.println(githubUser.getName());

@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface QuestionMapper {
-    @Insert("insert into question (TITLE,DESCRIPTION, GMT_CREATE, GMT_MODIFIED,CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG) values (#{title},#{description},#{gmtCreate},#{gmtModified},#{creator},#{commentCount},#{viewCount},#{likeCount},#{tag})")
+    @Insert("insert into question (TITLE,DESCRIPTION, GMT_CREATE, GMT_MODIFIED,CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG,avatar_url) values (#{title},#{description},#{gmtCreate},#{gmtModified},#{creator},#{commentCount},#{viewCount},#{likeCount},#{tag},#{avatarUrl})")
     int insert(Question question);
 
 }

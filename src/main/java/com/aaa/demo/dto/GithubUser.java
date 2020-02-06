@@ -1,5 +1,7 @@
 package com.aaa.demo.dto;
 
+import lombok.Data;
+
 /**
  * @ClassName 金鑫
  * @Description: TODO
@@ -7,32 +9,13 @@ package com.aaa.demo.dto;
  * @Date 2020/2/4
  * @Version V1.0
  **/
+@Data
 public class GithubUser {
     private String id;
     private String name;
     private String bio;
+    private String avatarUrl;
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getBio() {
-        return bio;
-    }
-
-    public void setBio(String bio) {
-        this.bio = bio;
-    }
 }
