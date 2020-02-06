@@ -1,6 +1,6 @@
 package com.aaa.demo.controller;
 
-import com.aaa.demo.dto.AccessTokenDto;
+import com.aaa.demo.dto.AccessTokenDTO;
 import com.aaa.demo.model.User;
 import com.aaa.demo.provider.GithubProvider;
 import com.aaa.demo.dto.GithubUser;
@@ -40,7 +40,7 @@ public class AuthorizeController {
             HttpServletResponse response
     ){
         //登入传递的参数
-        AccessTokenDto accessTokenDto = new AccessTokenDto();
+        AccessTokenDTO accessTokenDto = new AccessTokenDTO();
         accessTokenDto.setCode(code);
         accessTokenDto.setState(state);
         accessTokenDto.setRedirect_uri(redirectUri);

@@ -1,6 +1,6 @@
 package com.aaa.demo.provider;
 
-import com.aaa.demo.dto.AccessTokenDto;
+import com.aaa.demo.dto.AccessTokenDTO;
 import com.aaa.demo.dto.GithubUser;
 import com.alibaba.fastjson.JSON;
 import okhttp3.*;
@@ -17,7 +17,7 @@ import java.io.IOException;
  **/
 @Component
 public class GithubProvider {
-    public String getAccessToken(AccessTokenDto accessTokenDto){
+    public String getAccessToken(AccessTokenDTO accessTokenDto){
         MediaType mediaType = MediaType.get("application/json; charset=utf-8");
         OkHttpClient client = new OkHttpClient();
         RequestBody body = RequestBody.create(mediaType, JSON.toJSONString(accessTokenDto));

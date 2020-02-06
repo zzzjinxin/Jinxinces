@@ -10,7 +10,7 @@ import lombok.Data;
  * @Version V1.0
  **/
 @Data
-public class AccessTokenDto {
+public class AccessTokenDTO {
     private String client_id;
     private String client_secret;
     private String code;
